@@ -1,0 +1,981 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light">
+    <meta name="supported-color-schemes" content="light">
+    <title>Newsletter</title>
+    <style>
+        :root {
+            color-scheme: light;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .body {
+                background-color: #1C274A !important;
+            }
+
+            h1,
+            h2,
+            h3 {
+                color: #EEAB58 !important;
+                padding: 0px 0px 0px 0px !important;
+            }
+
+            .footer-bg {
+                background: #fff !important;
+            }
+
+            .footer-title {
+                color: #233872 !important;
+            }
+        }
+
+        .footer-bg {
+            background: #fff !important;
+        }
+
+        body {
+            background-color: #1C274A !important;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.15;
+            -webkit-text-size-adjust: 100%;
+            -webkit-tap-highlight-color: transparent
+        }
+
+        .date {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 28px;
+            color: #EEAB58;
+            margin: 0;
+            text-align: left;
+        }
+
+        .read-more {
+            cursor: pointer;
+        }
+
+        .our-blog {
+            background-size: contain;
+            background-repeat: no-repeat;
+            height: auto !important;
+            background-position: right;
+            background-color: #233872;
+            width: "100%";
+            align-items: center;
+        }
+
+        .mentor-tips {
+            background-size: contain;
+            background-repeat: no-repeat;
+            height: auto !important;
+            background-position: right;
+            background-color: #233872;
+            align-items: center;
+        }
+
+        .success-story {
+            background-size: contain;
+            background-repeat: no-repeat;
+            height: auto !important;
+            background-position: right;
+            background-color: #233872;
+            align-items: center;
+        }
+
+        .what-to-watch {
+            background-size: contain;
+            background-repeat: no-repeat;
+            height: auto !important;
+            background-position: right;
+            background-color: #233872;
+            width: "100%";
+            align-items: center;
+        }
+
+        .question-of-the-month {
+            background-size: contain;
+            background-repeat: no-repeat;
+            height: auto !important;
+            background-position: right;
+            background-color: #233872;
+            width: "100%";
+            align-items: center;
+        }
+
+        .important-dates {
+            background-size: contain;
+            background-repeat: no-repeat;
+            height: auto !important;
+            background-position: right;
+            background-color: #233872;
+            align-items: center;
+        }
+
+        .footer {
+            align-items: center;
+            margin: 0;
+        }
+
+        .footer-text {
+            background-color: #ffffff;
+            color: #233872;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 0.2em 2.5em;
+            line-height: 1.3em;
+            font-weight: 500;
+            margin-top: -15%;
+            padding-bottom: 6%;
+        }
+
+        body {
+            margin: 0px;
+            color: #233872;
+            background-color: #233872 !important;
+        }
+
+        @media screen and (max-width: 700px) {
+            .our-blog {
+                background: #233872;
+                background-size: contain;
+                background-repeat: no-repeat;
+                height: auto !important;
+                background-position: right;
+                width: "100%";
+                align: center;
+            }
+
+            .mentor-tips {
+                background: #233872;
+                background-size: contain;
+                background-repeat: no-repeat;
+                height: auto !important;
+                background-position: right;
+                width: "100%";
+                align: center;
+            }
+
+            .success-story {
+                background: #233872;
+                background-size: contain;
+                background-repeat: no-repeat;
+                height: auto !important;
+                background-position: right;
+                width: "100%";
+                align: center;
+            }
+
+            .what-to-watch {
+                background: #233872;
+                background-size: contain;
+                background-repeat: no-repeat;
+                height: auto !important;
+                background-position: right;
+                width: "100%";
+                align: center;
+            }
+
+            .question-of-the-month {
+                background: #233872;
+                background-size: contain;
+                background-repeat: no-repeat;
+                height: auto !important;
+                background-position: right;
+                width: "100%";
+                align: center;
+            }
+
+            .important-dates {
+                background: #233872;
+                background-size: contain;
+                background-repeat: no-repeat;
+                height: auto !important;
+                background-position: right;
+                width: "100%";
+                align: center;
+            }
+
+            .footer-text {
+                background-color: #ffffff;
+                color: #233872;
+                text-align: center;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            .footer-text-dua {
+                position: relative;
+                top: 80%;
+                left: 50%;
+                transform: translate(-50%, -70%);
+                width: 80%;
+                text-align: center;
+            }
+
+            .width100 {
+                width: 100%;
+                padding-left: 1%;
+                padding-right: 1%;
+            }
+
+            .width90 {
+                width: 90%;
+                align-items: center;
+            }
+
+            .center {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body style="font-family: Arial,Helvetica,sans-serif; background-color: #1C274A  !important; padding: 10px;">
+    <!-- Whole email newsletter table -->
+
+    <div style="font-family: Arial,Helvetica,sans-serif; background-color: #1C274A  !important;">
+        <table cellpadding="0" cellspacing="0" width="100%" border="0" align="center">
+            <tr>
+                <td>
+                    <table style="background-color: #233872;" cellpadding="0" cellspacing="0" width="600" align="center"
+                        class="width100">
+                        <tr>
+                            <td>
+                                <!-- Our Blog Header table -->
+                                <img src="https://all-inedu.com/wp-content/uploads/2022/04/header-april-22.webp"
+                                    style="width: 100%;margin-bottom:-6px;" />
+
+                                <table cellpadding="0" cellspacing="0" width="100%" border="0" class="width100"
+                                    style="border-left:1px solid #1C274A; border-right:1px solid #1C274A; width: 100% !important;">
+                                    <tr>
+                                        <td>
+                                            <div
+                                                style="background:#fff;background:linear-gradient(270deg,#EEAB58 20%,rgba(255,255,255,0) 77%); width: 100% !important;">
+                                                <div class="col" style="width: 100% !important;">
+                                                    <div
+                                                        style="color: #FFFFFF;font-family: Arial, Helvetica, sans-serif;font-size: 24px;margin-bottom: 0!important;font-weight:500;line-height: 1.2;margin-top: 0; display: block; width: 100%; padding: 8px 0">
+                                                        <div style="margin-left:25px">
+                                                            <b class="">Our Blog</b>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <!-- Our Blog section title and text -->
+                                <table class="width100 center our-blog"
+                                    style="border-left:1px solid #1C274A; border-right:1px solid #1C274A;">
+                                    <tr>
+                                        <td>
+                                            <table cellpadding="0" cellspacing="0" align="center"
+                                                class="width100 non-blur" border="0">
+                                                <tr>
+                                                    <td>
+                                                        <!-- Inner table - left image -->
+                                                        <table cellpadding="0" cellspacing="0" width="100%" border="0"
+                                                            align="left" class="width100" style="padding-right: 5%;">
+                                                            <tr>
+                                                                <td>
+                                                                    <p
+                                                                        style="text-align: left; font-family: Arial,Helvetica,sans-serif; font-weight: 700; font-size: 24px; margin-left: 5%; color: #ffffff;">
+                                                                        MAKING THE MOST OF YOUR WINTER BREAK: FIND OUT HOW!
+                                                                    </p>
+                                                                    <p
+                                                                        style="text-align: left; font-family: Arial,Helvetica,sans-serif; font-weight: 400; font-size: 14px; margin-left: 5%; color: #ffffff; text-align: justify;">
+                                                                        With the semester coming to an end, how do you feel about your studies? If there might be subjects that you’re struggling with, worry not! Private tutors are here to help you. It is never too late to keep up with schoolwork or get yourself ahead in the classroom.
+                                                                    </p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td style="text-align: left;padding-left: 5%;"
+                                                                    height="20">
+                                                                    <a href="https://all-inedu.com/private-tutor-a-gateway-to-enter-top-universities/"
+                                                                        style="box-sizing: border-box;color: #007bff;text-decoration: underline;background-color: transparent;">
+                                                                        <button class="read-more"
+                                                                            style="box-sizing: border-box;border-radius: .5em;margin: 0;font-family: Arial,Helvetica,sans-serif;font-size: 14px;overflow: visible;text-transform: none;-webkit-appearance: button;background: #eeab58;border: none;color: #fff;padding: .3em 1em;font-weight: 400;">
+                                                                            Read More  </button>
+                                                                    </a>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                        <!-- Inner table - right image -->
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <!-- Inner table - left image -->
+                                                        <table cellpadding="0" cellspacing="0" width="100%" border="0"
+                                                            align="left" class="width100" style="padding-right: 5%;">
+                                                            <tr>
+                                                                <td>
+                                                                    <p
+                                                                        style="text-align: left; font-family: Arial,Helvetica,sans-serif; font-weight: 400; font-size: 14px; margin-left: 5%; color: #ffffff; text-align: justify;">
+                                                                        Holiday is just around the corner. After keeping up with schoolwork and topping everything off with finals, how can you get yourself even more prepared for university? Here comes a university admissions consultant. With a multi-faceted role, they can pave your way to get into the university of your dreams.
+                                                                    </p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td style="text-align: left;padding-left: 5%;"
+                                                                    height="20">
+                                                                    <a href="https://all-inedu.com/benefits-of-a-university-admissions-consultant-for-aspiring-students/"
+                                                                        style="box-sizing: border-box;color: #007bff;text-decoration: underline;background-color: transparent;">
+                                                                        <button class="read-more"
+                                                                            style="box-sizing: border-box;border-radius: .5em;margin: 0;font-family: Arial,Helvetica,sans-serif;font-size: 14px;line-height: 1.15;overflow: visible;text-transform: none;-webkit-appearance: button;background: #eeab58;border: none;color: #fff;padding: .3em 1em;font-weight: 400;">
+                                                                            Learn More </button>
+                                                                    </a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td
+                                                                    style="text-align: left;padding-left: 5%; padding-top: 5%;">
+                                                                    <h3
+                                                                        style="text-align: center; font-family: Arial,Helvetica,sans-serif; font-weight: 700; font-size: 18px; color: #EEAB58;">
+                                                                        Gear yourself up before the next academic term by checking our <a
+                                                                            style="text-align: center; font-family: Arial,Helvetica,sans-serif; font-weight: 700; font-size: 18px; color: #EEAB58;"
+                                                                            href="https://all-inedu.com/blogs/"> our
+                                                                            blog!</a> </h3>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <!-- Mentor Header table -->
+                                <table cellpadding="0" cellspacing="0" border="0" align="right" class="width100"
+                                    style="border-left:1px solid #1C274A; border-right:1px solid #1C274A;">
+                                    <tr>
+                                        <td>
+                                            <div class="col title"
+                                                style="display: flex;flex-wrap: wrap;background:#233872;">
+                                                <img style="width: 100%;"
+                                                    src="dec_mentor tips.webp" />
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <!-- Mentor section title and text -->
+                                <table class="width100 center mentor-tips" cellspacing="0" cellpadding="0"
+                                    style="border-left:1px solid #1C274A; border-right:1px solid #1C274A;">
+                                    <tr>
+                                        <td>
+                                            <table cellpadding="0" cellspacing="0" align="left" class="width100"
+                                                border="0">
+                                                <tr>
+                                                    <td>
+                                                        <!-- Inner table - left image -->
+                                                        <table cellpadding="0" cellspacing="0" width="100%" border="0"
+                                                            align="left" class="width100" style="padding-right: 5%;">
+                                                            <tr>
+                                                                <td>
+                                                                    <p
+                                                                        style="text-align: left; font-family: Arial,Helvetica,sans-serif; font-weight: 400; font-size: 14px; margin-left: 5%; color: #ffffff; text-align: justify;">
+                                                                        Finals are over and school’s out. Aside from enjoying your time with your family and friends, you may be wondering what to do with all that free time. We got your back!
+                                                                    </p>
+                                                                    <p
+                                                                        style="text-align: left; font-family: Arial,Helvetica,sans-serif; font-weight: 400; font-size: 14px; margin-left: 5%; color: #ffffff; text-align: justify;">
+                                                                        Don’t let your holiday slip away easily. Find out how to stay productive during the holidays from Andra, an ALL-in mentor: 
+                                                                    </p>
+                                                                    <p
+                                                                        style="text-align: left; font-family: Arial,Helvetica,sans-serif; font-weight: 400; font-size: 14px; margin-left: 5%; color: #ffffff;">
+                                                                    <ul class="pl-3"
+                                                                        style="box-sizing: border-box;margin-top: 0;margin-bottom: 1rem;text-align: left!important;color: #ffffff !important;">
+                                                                        <li style="box-sizing: border-box;">
+                                                                            <b
+                                                                                style="box-sizing: border-box;font-weight: bolder;font-family: Arial,Helvetica,sans-serif; font-weight: 700; font-size: 14px;color: #ffffff;">
+                                                                                Reflect and refocus
+                                                                            </b>
+                                                                            
+                                                                            <ul class="pl-3"
+                                                                                style="box-sizing: border-box;margin-top: 0;margin-bottom: 1rem;text-align: left!important;color: #ffffff !important;">
+                                                                                <li style="box-sizing: border-box;">
+                                                                                    <p
+                                                                                        style="font-family: Arial,Helvetica,sans-serif; font-weight: 400; font-size: 14px;color: #ffffff;box-sizing: border-box;margin-top: 0;margin-bottom: 1rem;orphans: 3; text-align: justify;">
+                                                                                        It’s a good time to reflect on how you did in the previous semester, challenges you faced, and how you overcame them. Reflect on your growth and how you will approach the next semester better.
+                                                                                    </p>
+                                                                                </li>
+                                                                                <li style="box-sizing: border-box;">
+                                                                                    <p
+                                                                                        style="font-family: Arial,Helvetica,sans-serif; font-weight: 400; font-size: 14px;color: #ffffff;box-sizing: border-box;margin-top: 0;margin-bottom: 1rem;orphans: 3; text-align: justify;">
+                                                                                        You can set up new goals for next semester to ensure you are focusing on building your required skill sets and knowledge for your university application
+                                                                                    </p>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </li>
+                                                                        <li style="box-sizing: border-box;">
+                                                                            <b
+                                                                                style="box-sizing: border-box;font-weight: bolder;font-family: Arial,Helvetica,sans-serif; font-weight: 700; font-size: 14px;color: #ffffff;">
+                                                                                Try that new activity you have always been wanting to do</b>
+
+                                                                            <ul class="pl-3"
+                                                                                style="box-sizing: border-box;margin-top: 0;margin-bottom: 1rem;text-align: left!important;color: #ffffff !important;">
+                                                                                <li style="box-sizing: border-box;">
+                                                                                    <p
+                                                                                        style="font-family: Arial,Helvetica,sans-serif; font-weight: 400; font-size: 14px;color: #ffffff;box-sizing: border-box;margin-top: 0;margin-bottom: 1rem;orphans: 3; text-align: justify;">
+                                                                                            Since it's the holiday season, do find something fun for you to do to refresh yourself. Pick up that new hobby you have always been wanting to do, dwell in it and see how you really like it. It’s always good to use your time to find out what sparks joy in your life.
+                                                                                    </p>
+                                                                                </li>
+                                                                                <li style="box-sizing: border-box;">
+                                                                                    <p
+                                                                                        style="font-family: Arial,Helvetica,sans-serif; font-weight: 400; font-size: 14px;color: #ffffff;box-sizing: border-box;margin-top: 0;margin-bottom: 1rem;orphans: 3; text-align: justify;">
+                                                                                        This new activity can also be like taking a trip and still incorporating your interest in it to discover or learn something new.
+                                                                                    </p>
+                                                                                </li>
+                                                                                <li style="box-sizing: border-box;">
+                                                                                    <p
+                                                                                        style="font-family: Arial,Helvetica,sans-serif; font-weight: 400; font-size: 14px;color: #ffffff;box-sizing: border-box;margin-top: 0;margin-bottom: 1rem;orphans: 3; text-align: justify;">
+                                                                                        Volunteering or doing a personal project during the holiday season is also a great thing to do. Just make sure you balance it out with enough rest.
+                                                                                    </p>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </li>
+                                                                    </ul>
+                                                                    </p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td
+                                                                    style="text-align: left;padding-left: 5%; padding-bottom: 5%;">
+                                                                    <h3
+                                                                        style="text-align: center; font-family: Arial,Helvetica,sans-serif; font-weight: 700; font-size: 18px; color: #EEAB58;">
+                                                                        Find out more about how to have a productive holiday by heading over to our 
+                                                                        <a style="text-align: center; font-family: Arial,Helvetica,sans-serif; font-weight: 700; font-size: 18px; color: #EEAB58;"
+                                                                            href="https://www.instagram.com/allineduspace/">
+                                                                            Instagram!</a>
+                                                                    </h3>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                        <!-- Inner table - right image -->
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <!-- Success Story Header table -->
+                                <table cellpadding="0" cellspacing="0" width="100%" border="0" align="right"
+                                    class="width100"
+                                    style="border-left:1px solid #1C274A; border-right:1px solid #1C274A;">
+                                    <tr>
+                                        <td>
+                                            <div class="col title"
+                                                style="display: flex;flex-wrap: wrap;background:#fff;background:linear-gradient(270deg,#EEAB58 20%,rgba(255,255,255,0) 77%);">
+                                                <div class="col pl-4 p-2"
+                                                    style="flex-basis:0;flex-grow:1;max-width: 100%;padding: 0.5rem!important;padding-left: 1.5rem !important;">
+                                                    <p
+                                                        style="color: #FFFFFF;font-family: Arial, Helvetica, sans-serif;font-size: 24px;margin-bottom: 0!important;font-weight:500;line-height: 1.2;margin-top: 0;">
+                                                        <b>Success Story</b>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <!-- Success Story section title and text -->
+                                <table cellpadding="0" cellspacing="0" width="100%" border="0" align="right"
+                                    class="width100"
+                                    style="border-left:1px solid #1C274A; border-right:1px solid #1C274A;">
+                                    <tr>
+                                        <td>
+                                            <table cellpadding="0" cellspacing="0" align="center"
+                                                class="width100 non-blur" border="0" width="600">
+                                                <tr>
+                                                    <td>
+                                                        <!-- Inner table - left image -->
+                                                        <table cellpadding="0" cellspacing="0" width="100%" border="0"
+                                                            align="right" class="width100" style="padding-right: 5%;">
+                                                            <tr>
+                                                                <td align="center"
+                                                                    style="text-align: left;padding-left: 5%; padding-bottom: 5%;">
+                                                                    <img style="width: 100%; border-radius: 1em; margin-top: 2%;"
+                                                                        src="dec_mentee.webp" />
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <p
+                                                                        style="text-align: left; font-family: Arial,Helvetica,sans-serif; font-weight: 400; font-size: 14px; margin-left: 5%; color: #ffffff; text-align: justify;">
+                                                                        Most stray animals depend on humans for their life, including dogs. Abian, who currently lives in Oman, has seen many people that volunteer to feed stray dogs in the street there. That’s when he came up with an idea to make it more convenient for these people who have already done amazing initiatives. 
+                                                                    </p>
+                                                                    <p
+                                                                        style="text-align: left; font-family: Arial,Helvetica,sans-serif; font-weight: 400; font-size: 14px; margin-left: 5%; color: #ffffff; text-align: justify;">
+                                                                        He’s currently working on a project to create an automatic dog feeder that dispenses food every couple of hours. This project has been going for less than three months, and the prototype for this device is currently in the making. He has already finished making the build and progressing on researching the circuit aspect now.
+                                                                    </p>
+                                                                    <p
+                                                                        style="text-align: left; font-family: Arial,Helvetica,sans-serif; font-weight: 400; font-size: 14px; margin-left: 5%; color: #ffffff; text-align: justify;">
+                                                                        Like Abian, you can do your own project too! Make the most of your holiday by creating something that could contribute to the community and fulfill your hunger for passion. 
+                                                                    </p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td
+                                                                    style="text-align: left;padding-left: 5%; padding-bottom: 5%;">
+                                                                    <h3
+                                                                        style="text-align: center; font-family: Arial,Helvetica,sans-serif; font-weight: 700; font-size: 18px; color: #EEAB58;">
+                                                                        To read more about other mentees’ stories on university admissions and student projects, check out the success stories page
+                                                                        <a style="text-align: left; font-family: Arial,Helvetica,sans-serif; font-weight: 700; font-size: 18px; color: #EEAB58;"
+                                                                            href="https://all-inedu.com/success-stories/">
+                                                                            here!</a>
+                                                                    </h3>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                        <!-- Inner table - right image -->
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <!-- What to Watch Story Header table -->
+                                <table cellpadding="0" cellspacing="0" width="100%" border="0" align="right"
+                                    class="width100"
+                                    style="border-left:1px solid #1C274A; border-right:1px solid #1C274A;">
+                                    <tr>
+                                        <td>
+                                            <div class="col title"
+                                                style="display: flex;flex-wrap: wrap;background:#fff;background:linear-gradient(270deg,#EEAB58 20%,rgba(255,255,255,0) 77%);">
+                                                <div class="col pl-4 p-2"
+                                                    style="flex-basis:0;flex-grow:1;max-width: 100%;padding: 0.5rem!important;padding-left: 1.5rem !important;">
+                                                    <p
+                                                        style="color: #FFFFFF;font-family: Arial, Helvetica, sans-serif;font-size: 24px;margin-bottom: 0!important;font-weight:500;line-height: 1.2;margin-top: 0;">
+                                                        <b>What to Watch</b>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <!-- What to Watch section title and text -->
+                                <table cellpadding="0" cellspacing="0" width="100%" border="0" align="right"
+                                    class="width100"
+                                    style="border-left:1px solid #1C274A; border-right:1px solid #1C274A;">
+                                    <tr>
+                                        <td>
+                                            <table cellpadding="0" cellspacing="0" align="center"
+                                                class="width100 non-blur" border="0" width="600">
+                                                <tr>
+                                                    <td>
+                                                        <!-- Inner table - left image -->
+                                                        <table cellpadding="0" cellspacing="0" width="90%" border="0"
+                                                            align="left" class="width100">
+                                                            <tr>
+                                                                <td>
+                                                                    <p
+                                                                        style="text-align: left; font-family: Arial,Helvetica,sans-serif; font-weight: 700; font-size: 24px; margin-left: 5%; color: #EEAB58;">
+                                                                        MY HIGH SCHOOL INTERNSHIP STORY AS A RESEARCHER
+                                                                    </p>
+                                                                    <p
+                                                                        style="text-align: left; font-family: Arial,Helvetica,sans-serif; font-weight: 400; font-size: 14px; margin-left: 5%; color: #ffffff; text-align: justify;">
+                                                                        Have you ever wondered what it feels like to be working in the real world?
+                                                                    </p>
+                                                                    <p
+                                                                        style="text-align: left; font-family: Arial,Helvetica,sans-serif; font-weight: 400; font-size: 14px; margin-left: 5%; color: #ffffff; text-align: justify;">
+                                                                        In this video, our mentee, Cherish, is sharing her high school internship experience at i3L, a life sciences institution. From setting her goals to working closely with university students on bacteria, let’s have a look at her experience as a research intern!
+                                                                    </p>
+                                                                    <p
+                                                                        style="text-align: left; font-family: Arial,Helvetica,sans-serif; font-weight: 400; font-size: 14px; margin-left: 5%; color: #ffffff; text-align: justify;">
+                                                                        Curious how her internship went? 
+                                                                    </p>
+
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td style="text-align: center;padding-left: 5%; ">
+                                                                    <a
+                                                                        href="https://youtu.be/gNkfrzeM68Y">
+                                                                        <img src="dec_video.webp"
+                                                                            alt="Onoff" style="width: 90%;" />
+                                                                    </a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td style="padding-left: 5%;">
+                                                                    <h3
+                                                                        style="text-align: center; font-family: Arial,Helvetica,sans-serif; font-weight: 700; font-size: 18px; color: #EEAB58;">
+                                                                        Watch the full video on our <a
+                                                                            style="text-align: center; font-family: Arial,Helvetica,sans-serif; font-weight: 700; font-size: 18px; color: #EEAB58;"
+                                                                            href="https://youtu.be/VxFoFnFAj04">
+                                                                            YouTube
+                                                                            channel!</a>
+                                                                    </h3>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                        <!-- Inner table - right image -->
+                                                    </td>
+                                                </tr>
+
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <!-- Question of the month – with prize Header table -->
+                                <table cellpadding="0" cellspacing="0" width="100%" border="0" align="right"
+                                    class="width100"
+                                    style="border-left:1px solid #1C274A; border-right:1px solid #1C274A;">
+                                    <tr>
+                                        <td>
+                                            <div class="col title"
+                                                style="display: flex;flex-wrap: wrap;background:#fff;background:linear-gradient(270deg,#EEAB58 20%,rgba(255,255,255,0) 77%);">
+                                                <div class="col pl-4 p-2"
+                                                    style="flex-basis:0;flex-grow:1;max-width: 100%;padding: 0.5rem!important;padding-left: 1.5rem !important;">
+                                                    <p
+                                                        style="color: #FFFFFF;font-family: Arial, Helvetica, sans-serif;font-size: 24px;margin-bottom: 0!important;font-weight:500;line-height: 1.2;margin-top: 0;">
+                                                        <b>Question of the month – with prize</b>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <!-- Question of the month – with prize section title and text -->
+                                <table cellpadding="0" cellspacing="0" width="100%" border="0" align="right"
+                                    class="width100"
+                                    style="border-left:1px solid #1C274A; border-right:1px solid #1C274A;">
+                                    <tr>
+                                        <td>
+                                            <table cellpadding="0" cellspacing="0" align="center" class="width100"
+                                                border="0" width="600">
+                                                <tr>
+                                                    <td>
+                                                        <!-- Inner table - left image -->
+                                                        <table cellpadding="0" cellspacing="0" width="100%" border="0"
+                                                            align="left" class="width100" style="padding-right: 5%;">
+                                                            <tr>
+                                                                <td>
+                                                                    <p
+                                                                        style="text-align: left; font-family: Arial,Helvetica,sans-serif; font-weight: 400; font-size: 14px; margin-left: 5%; color: #ffffff; text-align: justify;">
+                                                                        This popular time management method involves alternating focused work sessions with frequent short breaks to boost concentration and eliminate mental fatigue. It was developed in the late 1980s by then university student Francesco Cirillo, who was struggling to focus on his studies and complete assignments. What is it called? 
+                                                                    </p>
+                                                                    <p
+                                                                        style="text-align: left; font-family: Arial,Helvetica,sans-serif; font-weight: 400; font-size: 14px; margin-left: 5%; color: #ffffff;">
+                                                                        A. Pomodoro technique
+                                                                        <br />
+                                                                        B. Eisenhower matrix <br />
+                                                                        C. 80/20 rule  <br />
+                                                                        D. Parkinson’s Law <br />
+                                                                    </p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td style="padding-left: 5%;">
+                                                                    <h3
+                                                                        style="text-align: center; font-family: Arial,Helvetica,sans-serif; font-weight: 700; font-size: 18px; color: #EEAB58;">
+                                                                        Send your answer on your Instagram Story and mention ours at @allineduspace!
+                                                                    </h3>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                        <!-- Inner table - right image -->
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <!-- Important Dates Header table -->
+                                <table cellpadding="0" cellspacing="0" width="100%" border="0" align="right"
+                                    class="width100"
+                                    style="border-left:1px solid #1C274A; border-right:1px solid #1C274A;">
+                                    <tr>
+                                        <td>
+                                            <div class="col title"
+                                                style="display: flex;flex-wrap: wrap;background:#fff;background:linear-gradient(270deg,#EEAB58 20%,rgba(255,255,255,0) 77%);">
+                                                <div class="col pl-4 p-2"
+                                                    style="flex-basis:0;flex-grow:1;max-width: 100%;padding: 0.5rem!important;padding-left: 1.5rem !important;">
+                                                    <p
+                                                        style="color: #FFFFFF;font-family: Arial, Helvetica, sans-serif;font-size: 24px;margin-bottom: 0!important;font-weight:500;line-height: 1.2;margin-top: 0;">
+                                                        <b>Important Date/Deadlines</b>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <!-- Important Dates section title and text -->
+                                <table cellpadding="0" cellspacing="0" width="100%" border="0" align="right"
+                                    class="width100"
+                                    style="border-left:1px solid #1C274A; border-right:1px solid #1C274A;">
+                                    <tr>
+                                        <td>
+
+                                            <!-- Inner table - left image -->
+                                            <table
+                                                style="margin-right: -10px; margin-bottom: 5% !important; padding-left: 2%;"
+                                                cellpadding="0" cellspacing="0" width="90%" border="0" align="left"
+                                                class="width100">
+                                                <tr valign="middle">
+                                                    <td style="padding-left: 2vw; width: 7em;" valign="middle">
+                                                        <h3 class="date"
+                                                            style="font-family: Arial, Helvetica, sans-serif;font-size: 28px;color: #EEAB58;">
+                                                            1</h3>
+                                                    </td>
+                                                    <td>
+                                                        <table style="width: auto;">
+                                                            <tr>
+                                                                <td align="left">
+                                                                    <p
+                                                                        style="text-align:left;font-family: Arial,Helvetica,sans-serif;font-size: 16px;color: #ffffff;margin-bottom: 0.5em;">
+                                                                        SAT Prep Class Registration (For March 2023 Test)
+                                                                    </p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td valign="top" align="left">
+                                                                    <a href="http://career-bootcamp.all-inedu.com"
+                                                                        style="font-family: Arial,Helvetica,sans-serif;width: 8em;text-align:center; background: #EEAB58;border: none;color:#fff;padding:0.3em 0.5em;border-radius: 1.5em; font-size: 14px; font-weight: 400;cursor: pointer; text-decoration: none;">
+                                                                        Register Now
+                                                                    </a>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                                <tr valign="middle">
+                                                    <td style="padding-left: 2vw; width: 7em;" valign="middle">
+                                                        <h3 class="date"
+                                                            style="font-family: Arial, Helvetica, sans-serif;font-size: 28px;color: #EEAB58;">
+                                                            15</h3>
+                                                    </td>
+                                                    <td style="padding-top: .4em 0;">
+                                                        <table style="width: auto;">
+                                                            <tr>
+                                                                <td align="left">
+                                                                    <p
+                                                                        style="text-align:left;font-family: Arial,Helvetica,sans-serif;font-size: 16px;color: #ffffff;margin-bottom: 0.5em;">
+                                                                        Entrepreneurship Mentoring Program Admission Open
+                                                                    </p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td valign="top" align="left">
+                                                                    <a href="https://linktr.ee/allineduspacecontact"
+                                                                        style="font-family: Arial,Helvetica,sans-serif;width: 8em;text-align:center; background: #EEAB58;border: none;color:#fff;padding:0.3em 0.5em;border-radius: 1.5em; font-size: 14px; font-weight: 400;cursor: pointer; text-decoration: none;">
+                                                                        Register Now
+                                                                    </a>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                                <tr valign="middle">
+                                                    <td style="padding-left: 2vw; width: 7em;" valign="middle">
+                                                        <h3 class="date"
+                                                            style="font-family: Arial, Helvetica, sans-serif;font-size: 28px;color: #EEAB58;">
+                                                            15 </h3>
+                                                    </td>
+                                                    <td style="padding-top: .4em 0;">
+                                                        <table style="width: auto;">
+                                                            <tr>
+                                                                <td align="left">
+                                                                    <p
+                                                                        style="text-align:left;font-family: Arial,Helvetica,sans-serif;font-size: 16px;color: #ffffff;margin-bottom: 0.5em;">
+                                                                        Science Research Mentoring Program Admission Open
+                                                                    </p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td valign="top" align="left">
+                                                                    <a href="https://linktr.ee/allineduspacecontact"
+                                                                        style="font-family: Arial,Helvetica,sans-serif;width: 8em;text-align:center; background: #EEAB58;border: none;color:#fff;padding:0.3em 0.5em;border-radius: 1.5em; font-size: 14px; font-weight: 400;cursor: pointer; text-decoration: none;">
+                                                                        Register Now
+                                                                    </a>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+
+                                                <!-- Inner table - right image -->
+                                            </table>
+                                            <table cellpadding="0" cellspacing="0" align="center"
+                                                class="width100 non-blur" border="0"
+                                                style="margin: 0 ;width:100%;border-spacing: 0; border-collapse: collapse;">
+                                                <tr>
+                                                    <td style="line-height: 24px; font-size: 16px; margin: 0;"
+                                                        align="center">
+                                                        <div width="90%" class="footer-bg"
+                                                            style=" color: #007bff; text-decoration: none; background-color: transparent;"
+                                                            align="center">
+                                                            <div style="border-spacing: 0; border-collapse: collapse; color: #007bff;background: rgb(255, 255, 255) !important; padding: 1em 0;"
+                                                                align="center">
+                                                                <img class="footer"
+                                                                    src="https://all-inedu.com/wp-content/uploads/2022/05/ALLIN-LOGO-NEW-1.png"
+                                                                    style="width: 25%; height: auto; line-height: 100%; outline: none; text-decoration: none; display: block; align-items: center;border-style: none; border-width: 0;">
+                                                                <h3 class="footer-title"
+                                                                    style="width: 80%;text-align: center; font-family: Arial,Helvetica,sans-serif; font-weight: 600; font-size: 16px; color: #233872;">
+                                                                    Here in ALL-in Eduspace, we can help you explore
+                                                                    your passion to choose the right major and map
+                                                                    out the path to your dream university.
+                                                                </h3>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </table>
+
+                                            <table cellpadding="0" cellspacing="0" align="center"
+                                                class="width100 non-blur" border="0"
+                                                style="margin: 0 ;width:100%;border-spacing: 0; border-collapse: collapse;">
+                                                <tr>
+                                                    <td style="line-height: 24px; font-size: 16px; margin: 0;"
+                                                        align="center">
+                                                        <div width="90%" class="footer-bg"
+                                                            style=" color: #007bff; text-decoration: none; background-color: transparent;"
+                                                            align="center">
+                                                            <div style="border-spacing: 0; border-collapse: collapse; color: #007bff;background: #9DCFE8 !important; padding: 1em 0;"
+                                                                align="center">
+
+                                                                <h3 class="footer-title"
+                                                                    style="width: 92%;text-align: center; font-family: Arial,Helvetica,sans-serif; font-weight: 00; font-size: 16px;margin-bottom: 0; color: #233872;">
+                                                                    Here’s our 2022 Admissions Results on the
+                                                                    2021-2022 admissions cycle:
+                                                                </h3>
+
+                                                                <table>
+                                                                    <tr valign="middle" style="align-items: center;">
+                                                                        <td style="padding-left: 2vw; width: 5em;"
+                                                                            valign="middle">
+                                                                            <h3 class="date"
+                                                                                style="font-family: Arial, Helvetica, sans-serif;font-weight: 800;font-size: 38px;color: #233872 !important;">
+                                                                                100%</h3>
+                                                                        </td>
+                                                                        <td style="padding-top: .4em 0;">
+                                                                            <table style="width: auto;">
+                                                                                <tr>
+                                                                                    <td align="left">
+                                                                                        <p
+                                                                                            style="text-align:left;font-family: Arial,Helvetica,sans-serif;font-weight: 800;font-size: 18px;color: #233872;margin-bottom: 0.5em;">
+                                                                                            accepted to US, UK,
+                                                                                            Canada, <br> Asia top
+                                                                                            universities
+                                                                                        </p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </table>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+
+                                                                <table>
+                                                                    <tr valign="top"
+                                                                        style="align-items: center; padding: 0 2rem 0 2rem; width: 90%;">
+                                                                        <td style="padding-left: 2vw; width: 30%;"
+                                                                            valign="top">
+                                                                            <h3 class="date"
+                                                                                style="text-align: center;font-family: Arial, Helvetica, sans-serif;font-weight: 800;font-size: 38px;color: #FFFFFF !important;">
+                                                                                51</h3>
+                                                                            <p
+                                                                                style="text-align:center;font-family: Arial,Helvetica,sans-serif;font-weight: 600;font-size: 16px;color: #FFFFFF;margin-bottom: 0.5em;">
+                                                                                Mentees for Undergraduate and
+                                                                                Graduate programs.
+                                                                            </p>
+                                                                        </td>
+
+                                                                        <td style="padding-left: 2vw; width: 30%;"
+                                                                            valign="top">
+                                                                            <h3 class="date"
+                                                                                style="text-align: center;font-family: Arial, Helvetica, sans-serif;font-weight: 800;font-size: 38px;color: #FFFFFF !important;">
+                                                                                5</h3>
+                                                                            <p
+                                                                                style="text-align:center;font-family: Arial,Helvetica,sans-serif;font-weight: 600;font-size: 16px;color: #FFFFFF;margin-bottom: 0.5em;">
+                                                                                Ivy League acceptances to Columbia,
+                                                                                Harvard, Dartmouth
+                                                                            </p>
+                                                                        </td>
+
+                                                                        <td style="padding-left: 2vw; width: 30%;"
+                                                                            valign="top">
+                                                                            <h3 class="date"
+                                                                                style="text-align: center;font-family: Arial, Helvetica, sans-serif;font-weight: 800;font-size: 38px;color: #FFFFFF !important;">
+                                                                                1</h3>
+                                                                            <p
+                                                                                style="text-align:center;font-family: Arial,Helvetica,sans-serif;font-weight: 600;font-size: 16px;color: #FFFFFF;margin-bottom: 0.5em;">
+                                                                                Oxbridge acceptance to Cambridge
+                                                                            </p>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </table>
+
+                                            <table cellpadding="0" cellspacing="0" align="center"
+                                                class="width100 non-blur" border="0"
+                                                style="margin: 0 ;width:100%;border-spacing: 0; border-collapse: collapse;">
+                                                <tr>
+                                                    <td style="line-height: 24px; font-size: 16px; margin: 0;"
+                                                        align="center">
+                                                        <div width="90%" class="footer-bg"
+                                                            style=" color: #007bff; text-decoration: none; background-color: transparent;"
+                                                            align="center">
+                                                            <div style="border-spacing: 0; border-collapse: collapse; color: #007bff;background: rgb(255, 255, 255) !important; padding: 1em 0;"
+                                                                align="center">
+                                                                <h3
+                                                                    style="width: 80%;text-align: center; font-family: Arial,Helvetica,sans-serif; font-weight: 700; font-size: 16px; color: #EEAB58;">
+                                                                    Have a chit-chat with us!
+                                                                </h3>
+                                                                <a href="https://all-inedu.com/sign-me/"
+                                                                    class="read-more"
+                                                                    style="box-sizing: border-box; border-radius: .5em; font-family: Arial,Helvetica,sans-serif; font-size: 14px; line-height: 1.15; overflow: visible; text-transform: none; -webkit-appearance: button; background-color: #eeab58; color: #fff; font-weight: 400; margin: 0; padding: 0.4em 1em; border-style: none;text-decoration: none;">
+                                                                    Book an Initial Consultation
+                                                                </a>
+                                                                <table style="width: 25%;">
+                                                                    <tr valign="middle">
+                                                                        <td>
+                                                                            <a href="www.instagram.com/allineduspace/">
+                                                                                <img style="width: 100%;"
+                                                                                    src="https://all-inedu.com/wp-content/uploads/2022/05/akar-icons_instagram-fill.png" />
+                                                                            </a>
+                                                                        </td>
+                                                                        <td>
+                                                                            <a
+                                                                                href="https://www.youtube.com/channel/UCLZ0P-RRdr7k5j2dxhNlObg">
+                                                                                <img style="width: 100%;"
+                                                                                    src="https://all-inedu.com/wp-content/uploads/2022/05/akar-icons_whatsapp-fill.png" />
+                                                                            </a>
+                                                                        </td>
+                                                                        <td>
+                                                                            <a
+                                                                                href="https://linktr.ee/allineduspacecontact">
+                                                                                <img style="width: 100%;"
+                                                                                    src="https://all-inedu.com/wp-content/uploads/2022/05/akar-icons_youtube-fill.png" />
+                                                                            </a>
+                                                                        </td>
+                                                                        <td>
+                                                                            <a href="https://all-inedu.com/">
+                                                                                <img style="width: 100%;"
+                                                                                    src="https://all-inedu.com/wp-content/uploads/2022/05/mdi_web.png" />
+                                                                            </a>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                                <a href="{$unsubscribe}"
+                                                                    style="font-size: 10px;">Unsubscribe</a>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                <td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>
